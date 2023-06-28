@@ -12,3 +12,5 @@
 2) heroku create react-news-app-api
 3) git remote -v (To check heroku added or not)
 4) to push after commit - git push heroku
+
+5)backend deployed on render.com "https://news-app-pv.onrender.com"

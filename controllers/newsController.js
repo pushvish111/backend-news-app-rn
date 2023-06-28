@@ -10,7 +10,7 @@ const moment = require("moment");
 const addNews = asyncHandler(async (req, res) => {
   console.log(req);
   // const imgUrl = await uploadImage(req.files)
-  const { title, content, url, author, category, imageUrl } = req.body;
+  const { title, content, url, author, category, imageUrl, addToSlider } = req.body;
   // console.log("req.body", req.body);
   // console.log("req.files.images", req.files.image);
   let urlImage = "";
@@ -24,6 +24,7 @@ const addNews = asyncHandler(async (req, res) => {
     title,
     content,
     category,
+    addToSlider,
     url,
     urlToImage: imageUrl !== "" ? imageUrl : `data:${req.files.image.type};base64,` + urlImage,
     addedAt: Date.now(),

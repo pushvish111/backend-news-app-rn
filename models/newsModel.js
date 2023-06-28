@@ -27,7 +27,14 @@ const newsSchema = new mongoose.Schema({
     timeToRead: {
         type: String
     },
-    comments: [],
+    comments: [{
+        user: {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+        },
+        comment: String
+    }
+    ],
     like: {
         type: Number
     },
